@@ -8,7 +8,6 @@ class StockForm extends Component {
 		}
 	}
 
-
 	onChange = (e) => {
 		const quote = e.target.value;
 		this.setState (() => ({ quote })); 
@@ -17,16 +16,19 @@ class StockForm extends Component {
 
 	onSubmit = (e) => {
 		e.preventDefault();
-		this.props.handleQuoteChange({
-			quote: this.state.quote
-		});
-		console.log(this.state.quote)
+		this.props.handleQuoteChange(this.state.quote);
+		this.setState(() => ({
+			quote: ''
+		}));
 	}
 
 	render() {
 		return (
 			<form onSubmit={this.onSubmit}>
-				<input value={this.state.quote} onChange={this.onChange} placeholder="Enter new Quote" /> 
+				<input 
+					value={this.state.quote} 
+					onChange={this.onChange} 
+					placeholder="Enter Quote ID" /> 
 				<button>StockForm</button>
 			</form>
 		)

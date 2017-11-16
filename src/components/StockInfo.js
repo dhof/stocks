@@ -1,9 +1,16 @@
 import React from 'react';
 
-const StockInfo = () => {
+const StockInfo = (props) => {
+	console.log(props.data)
+	const quote = props.data; 
 	return (
 		<div>
-			StockInfo
+			<p>{quote.LastPrice} {quote.Change} {quote.ChangePercent}</p> 
+			<p>Range {quote.Low} - {quote.High}</p>
+			<p>Open {quote.Open}</p>
+			<p>Volume {quote.Volume}</p>
+			<p>Market Cap {quote.MarketCap}</p>
+			<p>{Date.now()}</p>
 		</div>
 	)
 }

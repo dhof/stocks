@@ -1,5 +1,5 @@
-{
-MSFT {
+const dataList = {
+MSFT:  {
   Change: 0.519999999999996,
   ChangePercent: 0.724637681159415,
   ChangePercentYTD: 16.3179916317992,
@@ -16,7 +16,7 @@ MSFT {
   Timestamp: "Mon Jun 5 00:00:00 UTC-04:00 2017",
   Volume: 33316760
 },
-BRKA {
+BRKA : {
   Change: -550,
   ChangePercent: -0.22,
   ChangePercentYTD: 2.18293387295644,
@@ -33,7 +33,7 @@ BRKA {
   Timestamp: "Tue Jun 6 15:38:53 UTC-04:00 2017",
   Volume: 297
 },
-AAPL {
+AAPL : {
   Change: -1.51999999999998,
   ChangePercent: -0.977806368607258,
   ChangePercentYTD: 32.9045069936108,
@@ -50,7 +50,7 @@ AAPL {
   Timestamp: "Mon Jun 5 00:00:00 UTC-04:00 2017",
   Volume: 25331662
 },
-INFO {
+INFO : {
   Change: -0.260000000000005,
   ChangePercent: -0.552486187845315,
   ChangePercentYTD: 32.1660547867834,
@@ -67,7 +67,7 @@ INFO {
   Timestamp: "Mon Jun 5 00:00:00 UTC-04:00 2017",
   Volume: 4082775
 },
-F {
+F : {
   Change: -0.109999999999999,
   ChangePercent: -0.977777777777773,
   ChangePercentYTD: -8.16158285243199,
@@ -84,7 +84,7 @@ F {
   Timestamp: "Tue Jun 6 15:43:36 UTC-04:00 2017",
   Volume: 40054809
 },
-PLT {
+PLT : {
   Change: -0.18,
   ChangePercent: -0.323682790864952,
   ChangePercentYTD: 1.22352081811542,
@@ -101,7 +101,7 @@ PLT {
   Timestamp: "Tue Jun 6 15:52:58 UTC-04:00 2017",
   Volume: 94192
 },
-BIG {
+BIG : {
   Change: -1.36,
   ChangePercent: -2.73972602739726,
   ChangePercentYTD: -3.84385580561641,
@@ -118,7 +118,7 @@ BIG {
   Timestamp: "Tue Jun 6 15:53:25 UTC-04:00 2017",
   Volume: 1253948
 },
-TWX {
+TWX : {
   Change: -0.240000000000009,
   ChangePercent: -0.240722166499508,
   ChangePercentYTD: 3.03532580544908,
@@ -135,7 +135,7 @@ TWX {
   Timestamp: "Tue Jun 6 15:53:42 UTC-04:00 2017",
   Volume: 2953535
 },
-AME {
+AME : {
   Change: -0.269999999999996,
   ChangePercent: -0.436893203883489,
   ChangePercentYTD: 26.6049382716049,
@@ -152,7 +152,7 @@ AME {
   Timestamp: "Tue Jun 6 15:53:39 UTC-04:00 2017",
   Volume: 601580
 },
-JWN {
+JWN : {
   Change: -1.565,
   ChangePercent: -3.75750300120047,
   ChangePercentYTD: -16.367619445024,
@@ -169,7 +169,7 @@ JWN {
   Timestamp: "Tue Jun 6 15:54:07 UTC-04:00 2017",
   Volume: 4133041
 },
-CVS {
+CVS : {
   Change: -0.984999999999999,
   ChangePercent: -1.25015864957482,
   ChangePercentYTD: -1.40032948929159,
@@ -186,7 +186,7 @@ CVS {
   Timestamp: "Tue Jun 6 15:54:19 UTC-04:00 2017",
   Volume: 3812490
 },
-MS {
+MS : {
   Change: 0.104999999999997,
   ChangePercent: 0.244812310561895,
   ChangePercentYTD: 1.76331360946745,
@@ -203,7 +203,7 @@ MS {
   Timestamp: "Tue Jun 6 15:54:31 UTC-04:00 2017",
   Volume: 5471583
 },
-MET {
+MET : {
   Change: -0.705000000000005,
   ChangePercent: -1.37883825542735,
   ChangePercentYTD: -6.42976433475599,
@@ -220,11 +220,11 @@ MET {
   Timestamp: "Tue Jun 6 15:54:46 UTC-04:00 2017",
   Volume: 3751545
 },
-IVD {
+IVD : {
   Message: "No symbol matches found for RDM. Try another symbol such as MSFT or AAPL, or use the Lookup API.",
   Status: "FAILED"
 },
-RND {
+RND : {
   Change: -1.089709777474873,
   ChangePercent: 8.228990072005814,
   ChangePercentYTD: -9.498026142686129,
@@ -240,3 +240,5 @@ RND {
   Timestamp: "Sat Nov 11 2017 17:01:08 GMT-0700 (Mountain Standard Time)",
   Volume: 4087557001583609
 }}
+
+export default dataList;
