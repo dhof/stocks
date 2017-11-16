@@ -1,7 +1,6 @@
 import React from 'react';
 
 const StockInfo = (props) => {
-	console.log(props.data)
 	const quote = props.data; 
 	return (
 		<div>

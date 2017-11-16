@@ -11,12 +11,11 @@ class StockForm extends Component {
 	onChange = (e) => {
 		const quote = e.target.value;
 		this.setState (() => ({ quote })); 
-		console.log(this.state.quote)
 	}
 
 	onSubmit = (e) => {
 		e.preventDefault();
-		this.props.handleQuoteChange(this.state.quote);
+		this.props.handleQuoteChange(this.state.quote.toUpperCase());
 		this.setState(() => ({
 			quote: ''
 		}));
