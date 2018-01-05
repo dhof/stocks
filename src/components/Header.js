@@ -1,9 +1,11 @@
-import React from 'react';
+import React from 'react'
 
 const Header = (props) => {
 	return (
-	<h4>{props.data.Name}</h4>
+		<div>
+		<h4>{props.quote.companyName}</h4>
+		</div>
 	)
-};
+}
 
-export default Header;
+export default Header

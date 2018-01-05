@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 class StockForm extends Component {
 	constructor(props) {
@@ -9,16 +9,16 @@ class StockForm extends Component {
 	}
 
 	onChange = (e) => {
-		const quote = e.target.value;
-		this.setState (() => ({ quote })); 
+		const quote = e.target.value
+		this.setState (() => ({ quote })) 
 	}
 
 	onSubmit = (e) => {
-		e.preventDefault();
-		this.props.handleQuoteChange(this.state.quote.toUpperCase());
+		e.preventDefault()
+		this.props.handleQuoteChange(this.state.quote.toUpperCase())
 		this.setState(() => ({
 			quote: ''
-		}));
+		}))
 	}
 
 	render() {
@@ -34,4 +34,4 @@ class StockForm extends Component {
 	}
 }
 
-export default StockForm;
+export default StockForm

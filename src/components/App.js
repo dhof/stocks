@@ -1,34 +1,59 @@
-import React, { Component } from 'react';
-import Header from './Header';
-import StockInfo from './StockInfo';
-import StockForm from './StockForm';
-import dataList from '../dataList.js';
+import React, { Component } from 'react'
+import marketApiCalls from '../marketApiCalls'
+import * as firebase from 'firebase'
+import Header from './Header'
+import StockInfo from './StockInfo'
+import StockForm from './StockForm'
+
 
 class App extends Component {
 	constructor() {
-		super();
+		super()
 		this.state = {
-			data: dataList.MSFT,
+			stockData: null,
+			selectedQuote: '',
 			error: ''
 		}
+		this.db = firebase.database()
+		const state = this.state
+	}
+
+	componentWillMount() {
+		this.db.ref().once('value')
+			.then((snapshot) => {
+				this.setState(() => {
+					return {
+						stockData: snapshot.val()
+					}
+				})
+			})
+	}
+
+	componentDidUpdate() {
+		if (this.state.selectedQuote === '' && this.state.stockData !== null) {
+			this.setState({selectedQuote: this.state.stockData['MSFT']})
+		} 
 	}
 
 	handleQuoteChange = (e) => {
-		var val = dataList[e];
+		const val = this.state.stockData[e]
 		if (val) {
-			this.setState({data: val})	
+			this.setState({
+				selectedQuote: val,
+				error: ''
+			})	
 		} else {
-			this.setState({error: 'Please enter an ID from the list below'})
+			this.setState({error: 'Please enter a stock symbol from the list below'})
 		}
 	}
 
 
 	render() {
-		const state = this.state;
+		const state = this.state
 		return (
 			<div>
-				<Header data={state.data} />
-				<StockInfo data={state.data} />
+				<Header quote={state.selectedQuote} />
+				<StockInfo quote={state.selectedQuote} />
 				<StockForm 
 					handleQuoteChange={this.handleQuoteChange}
 				/>
@@ -39,6 +64,7 @@ class App extends Component {
 				<br/>
 				<br/>
 				<div>
+					<p>List of available stock quotes:</p>
 					<p>AAPL, AME, BIG, BRKA, CVS, F, INFO, IVD, JWN, MET, MS, MSFT, PLT, RND, TWX</p>
 				</div>
 			</div>
@@ -47,4 +73,4 @@ class App extends Component {
 }
 
 
-export default App;
+export default App
