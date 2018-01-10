@@ -3,9 +3,28 @@ import '../app.css'
 
 const StockInfo = (props) => {
 	const quote = props.quote 
+
+	const convertTimestamp = (timestamp) => {
+		let date = new Date(timestamp*1000)
+		let hours = date.getHours()
+		let minutes = "0" + date.getMinutes()
+		let seconds = "0" + date.getSeconds()
+		if (hours === 0) {
+			hours = 12
+			return hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2) + ' AM'
+		} else if (hours < 12) {
+			hours = "0" + hours
+			return hours.substr(-2) + ':' + minutes.substr(-2) + ':' + seconds.substr(-2) + ' AM'
+		} else {
+			hours === 12 ? hours = "0" + 12 : hours = "0" + (hours - 12)
+			return hours.substr(-2) + ':' + minutes.substr(-2) + ':' + seconds.substr(-2) + ' PM'
+		}
+	}
+
 	if(props.quote === "") {
 		return (
 			<div>
+				{/* Loading Data */}
 			</div>
 		)
 	} else {
@@ -32,7 +51,7 @@ const StockInfo = (props) => {
 				<p className="value">{(quote.marketCap / 1000000000).toFixed(1)}B</p>
 			</div>
 			<div className="quote-row">
-				<p className="last-updated">As of {quote.latestUpdate}</p>
+				<p className="last-updated">As of {convertTimestamp(quote.latestUpdate)}</p>
 			</div>
 		</div>
 	)
