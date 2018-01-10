@@ -1,0 +1,113 @@
+#root {
+  /*font-family: "Calibri";*/
+  border-top: 3px solid #686668;
+  font-family: Gadget;
+  margin: 20px 0 0 5px;
+  min-height: 200px;
+  width: 370px;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.company-name-row {
+  width: 25%;
+}
+
+.company-name {
+  color: #52565f;
+  font-size: 14px;
+  font-weight: 100;
+  letter-spacing: 1.4px;
+  margin: 11px 0 15px 0;
+  text-transform: uppercase;
+}
+
+.quote-row {
+  border-bottom: 1px solid #d9dad9;
+  padding: 0 2% 0 1.5%
+}
+
+.latest-price,
+.change-neg,
+.change-pos,
+.tag,
+.value {
+  display: inline-block;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  width: 50%;
+}
+
+.latest-price {
+  font-size: px;
+  /*font-weight: 200;*/
+}
+
+
+.change-neg,
+.change-pos {
+  font-size: 17px;
+  text-align: right;
+}
+
+.change-neg {
+  color: red;
+}
+
+.change-pos {
+  color: green;
+}
+
+.tag {
+  color: #737173;
+  font-size: 12px;
+}
+
+.value {
+  font-size: 15px;
+  font-weight: bold;
+  text-align: right;
+}
+
+.last-updated {
+  color: #737173;
+  font-size: 12px;
+  margin-bottom: 9px;
+  margin-top: 9px;
+  text-align: right;
+}
+
+.input-form {
+  height: 40px;
+}
+
+
+.input {
+  border: 1px solid #dedfde;
+  border-radius: 5px 0 0 5px;
+  font-weight: lighter;
+  height: 100%;
+  margin-right: 4px;
+  padding-left: 5px;
+  width: 45%;
+}
+
+.submitButton {
+  background-color: #ffffff;
+  border: 1px solid #dedfde;
+  border-radius: 0 5px 5px 0;
+  /*float: right;*/
+  font-size: 14px;
+  font-weight: lighter;
+  height: 100%;
+  margin: 0;
+  padding-bottom: 0;
+  padding-top: 2px;
+  width: 45%;
+}
+
+.error {
+  color: red;
+}

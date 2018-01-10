@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import '../app.css'
 
 class StockForm extends Component {
 	constructor(props) {
@@ -23,13 +24,15 @@ class StockForm extends Component {
 
 	render() {
 		return (
-			<form onSubmit={this.onSubmit}>
-				<input 
-					value={this.state.quote} 
-					onChange={this.onChange} 
-					placeholder="Enter Quote ID" /> 
-				<button>StockForm</button>
-			</form>
+				<form onSubmit={this.onSubmit}>
+					<input 
+						value={this.state.quote} 
+						onChange={this.onChange} 
+						placeholder="Enter Quote ID" 
+						className="input"
+					/> 
+					<button className="submitButton">Get New Quote</button>
+				</form>
 		)
 	}
 }

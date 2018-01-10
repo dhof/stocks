@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import marketApiCalls from '../marketApiCalls'
 import * as firebase from 'firebase'
+import '../app.css'
 import Header from './Header'
 import StockInfo from './StockInfo'
 import StockForm from './StockForm'
@@ -15,7 +16,6 @@ class App extends Component {
 			error: ''
 		}
 		this.db = firebase.database()
-		const state = this.state
 	}
 
 	componentWillMount() {
@@ -51,13 +51,15 @@ class App extends Component {
 	render() {
 		const state = this.state
 		return (
-			<div>
+			<div className="wrapper">
 				<Header quote={state.selectedQuote} />
 				<StockInfo quote={state.selectedQuote} />
-				<StockForm 
-					handleQuoteChange={this.handleQuoteChange}
-				/>
-				{state.error && <p>{state.error}</p>}
+				<div className="input-form">
+					<StockForm 
+						handleQuoteChange={this.handleQuoteChange}
+					/>
+				</div>
+				{state.error && <p className="error">{state.error}</p>}
 				<br/>
 				<br/>
 				<br/>
@@ -65,7 +67,7 @@ class App extends Component {
 				<br/>
 				<div>
 					<p>List of available stock quotes:</p>
-					<p>AAPL, AME, BIG, BRKA, CVS, F, INFO, IVD, JWN, MET, MS, MSFT, PLT, RND, TWX</p>
+					<p>AAPL, AME, BIG, BRKA, CVS, F, INFO, JWN, MET, MS, MSFT, PLT, TWX</p>
 				</div>
 			</div>
 		)
