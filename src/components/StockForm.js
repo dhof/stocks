@@ -26,12 +26,12 @@ class StockForm extends Component {
 		return (
 				<form onSubmit={this.onSubmit}>
 					<input 
+						type="text"
 						value={this.state.quote} 
 						onChange={this.onChange} 
-						placeholder="Enter Quote ID" 
 						className="input"
 					/> 
-					<button className="submitButton">Get New Quote</button>
+					<button type="submit" className="submit">Get New Quote</button>
 				</form>
 		)
 	}

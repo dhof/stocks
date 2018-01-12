@@ -5,6 +5,7 @@ import '../app.css'
 import Header from './Header'
 import StockInfo from './StockInfo'
 import StockForm from './StockForm'
+import SymbolList from './SymbolList'
 
 
 class App extends Component {
@@ -43,15 +44,16 @@ class App extends Component {
 				error: ''
 			})	
 		} else {
-			this.setState({error: 'Please enter a stock symbol from the list below'})
+			this.setState({error: 'Enter a symbol from the list below'})
 		}
 	}
 
 
 	render() {
+
 		const state = this.state
 		return (
-			<div className="wrapper">
+			<div>
 				<Header quote={state.selectedQuote} />
 				<StockInfo quote={state.selectedQuote} />
 				<div className="input-form">
@@ -59,16 +61,9 @@ class App extends Component {
 						handleQuoteChange={this.handleQuoteChange}
 					/>
 				</div>
-				{state.error && <p className="error">{state.error}</p>}
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<div>
-					<p>List of available stock quotes:</p>
-					<p>AAPL, AME, BIG, BRKA, CVS, F, INFO, JWN, MET, MS, MSFT, PLT, TWX</p>
-				</div>
+					{state.error && <p className="error">{state.error}</p>}
+
+				<SymbolList />
 			</div>
 		)
 	}

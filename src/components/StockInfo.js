@@ -32,7 +32,7 @@ const StockInfo = (props) => {
 		<div>
 			<div className="quote-row">
 				<p className="latest-price">{quote.latestPrice.toFixed(2)}</p>
-				<p className={quote.change < 0 ? "change-neg" : "change-pos"}>{quote.change.toFixed(2)} ( {(quote.changePercent * 100).toFixed(2)}%)</p>
+				<p className={quote.change < 0 ? "change-neg change" : "change-pos change"}>{quote.change.toFixed(2)} ( {(quote.changePercent * 100).toFixed(2)}%)</p>
 			</div>
 			<div className="quote-row">
 				<p className="tag">Range</p>
