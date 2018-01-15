@@ -22,3 +22,6 @@ yarn-error.log*
 
 # configs
 /src/config/config.js
+
+# prod build
+/build
