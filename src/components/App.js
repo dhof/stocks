@@ -62,7 +62,7 @@ class App extends Component {
 					/>
 				</div>
 					{state.error && <p className="error">{state.error}</p>}
-
+					{process.env.REACT_APP_TEST}
 				<SymbolList />
 			</div>
 		)
