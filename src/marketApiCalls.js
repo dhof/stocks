@@ -1,6 +1,6 @@
 import axios from 'axios'
 import * as firebase from 'firebase'
-import { firebaseConfig } from './config/config'
+import { firebaseConfig } from './config/Config'
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig)
