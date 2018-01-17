@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import marketApiCalls from '../marketApiCalls'
 import * as firebase from 'firebase'
-import '../App.css'
+import './App.css'
 import Header from './Header'
 import StockInfo from './StockInfo'
 import StockForm from './StockForm'
