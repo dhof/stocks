@@ -20,8 +20,5 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# configs
-/src/config/config.js
-
-# prod build
-/build
+# env vars
+.env
