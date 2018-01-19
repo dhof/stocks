@@ -14,12 +14,6 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig)
 const db = firebase.database()
 
-// Log into Firebase account
-firebase.auth().signInWithEmailAndPassword(process.env.REACT_APP_FIREBASE_USER, process.env.REACT_APP_FIREBASE_PASS)
-.catch(function(error) {
-  console.log(error.code, error.message)
-})
-
 
 // IEX Trading API call
 	axios.get('https://api.iextrading.com/1.0/stock/market/batch', {

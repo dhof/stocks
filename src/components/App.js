@@ -7,6 +7,12 @@ import StockInfo from './StockInfo'
 import StockForm from './StockForm'
 import SymbolList from './SymbolList'
 
+// Log into Firebase account
+firebase.auth().signInWithEmailAndPassword(process.env.REACT_APP_FIREBASE_USER, process.env.REACT_APP_FIREBASE_PASS)
+.catch(function(error) {
+  console.log(error.code, error.message)
+})
+
 
 class App extends Component {
 	constructor() {
